@@ -11,6 +11,7 @@ namespace StateMachineApp
     {
         static void Main(string[] args)
         {
+            //adjust file paths
             new DynamicStateMachineCompiler(new SerializerFactory()).Compile("cfg.csv", "compiled.bson");
             var tRunner = TemplateGameAiRunnerFactory.CreateRunner();
             var sRunner = SchemalessGameAiRunnerFactory.CreateRunner("cfg.csv");
